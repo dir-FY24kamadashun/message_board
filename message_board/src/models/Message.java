@@ -23,7 +23,7 @@ import javax.persistence.Table;
 
 public class Message {
     @Id
-    @Column
+    @Column(name="id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
     
@@ -38,6 +38,10 @@ public class Message {
     
     @Column(name="update_at",nullable=false)
     private Timestamp updated_at;
+    
+    public Integer getId() {
+        return id;
+    }
     
     public void setId(Integer id) {                                                                                                                      
         this.id=id;
@@ -69,8 +73,13 @@ public class Message {
     
     
         // TODO 自動生成されたコンストラクター・スタブ
-    }
+    
         // TODO 自動生成されたメ
+
+    
+        // TODO 自動生成されたメソッド・スタブ
+  
+    }
 
    
     
